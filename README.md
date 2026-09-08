@@ -40,7 +40,7 @@ The Inspector connects to the Appium Server using:
 - Remote Host: 127.0.0.1
 - Remote Port: 4723
 - Remote Path: /
-- Android Capabilities
+Android Capabilities
 
 The following capabilities are used:
 
