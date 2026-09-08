@@ -37,27 +37,27 @@ Inspector Configuration
 
 The Inspector connects to the Appium Server using:
 
-Remote Host: 127.0.0.1
-Remote Port: 4723
-Remote Path: /
-Android Capabilities
+- Remote Host: 127.0.0.1
+- Remote Port: 4723
+- Remote Path: /
+- Android Capabilities
 
 The following capabilities are used:
 
-Platform Name: Android
-Automation Name: UiAutomator2
-Device Name: emulator-5554
-App Package: org.wikipedia
-App Activity: org.wikipedia.main.MainActivity
+- Platform Name: Android
+- Automation Name: UiAutomator2
+- Device Name: emulator-5554
+- App Package: org.wikipedia
+- App Activity: org.wikipedia.main.MainActivity
 
 Equivalent Java configuration:
 
-options.setPlatformName("Android");
-options.setAutomationName("UiAutomator2");
-options.setDeviceName("emulator-5554");
-options.setAppPackage("org.wikipedia");
-options.setAppActivity("org.wikipedia.main.MainActivity");
-Locator Identification
+- options.setPlatformName("Android");
+- options.setAutomationName("UiAutomator2");
+- options.setDeviceName("emulator-5554");
+- options.setAppPackage("org.wikipedia");
+- options.setAppActivity("org.wikipedia.main.MainActivity");
+- Locator Identification
 
 Appium Inspector was used to inspect the Wikipedia application and identify elements such as:
 
@@ -77,6 +77,9 @@ org.wikipedia:id/closeButton
 
 The inspected locators are then used inside the Page Object classes to separate UI element identification from test logic.
 ---
+
+https://github.com/user-attachments/assets/2a177dea-362f-41d0-b602-fa6e7b2ebf81
+
 
 ## Project Structure
 
