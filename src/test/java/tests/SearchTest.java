@@ -3,37 +3,22 @@ package tests;
 import base.BaseTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
-import pages.OnboardingPage;
-
-public class SearchTest extends BaseTest {
-
-    @Test
-    public void openSearchPage() {
-
-        OnboardingPage onboardingPage =
-                new OnboardingPage(driver);
-
-        HomePage homePage =
-                new HomePage(driver);
-
-        onboardingPage.completeOnboarding();
-
-        homePage.clickSearch();
-    }
-}/*package tests;
-
-import base.BaseTest;
-import org.testng.annotations.Test;
 import pages.SearchPage;
 
 public class SearchTest extends BaseTest {
 
     @Test
-    public void searchWikipedia() {
+    public void searchForArticle() {
 
-        SearchPage searchPage =
-                new SearchPage(driver);
+        HomePage homePage = new HomePage(driver);
+        SearchPage searchPage = new SearchPage(driver);
 
-        searchPage.clickSearch();
+        homePage.clickSearch();
+
+        searchPage.closePopup();
+
+        searchPage.clickSearchField();
+        searchPage.enterSearchText("Artificial Intelligence");
+        searchPage.clickFirstSearchResult();
     }
-}*/
+}
