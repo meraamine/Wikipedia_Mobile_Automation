@@ -1,0 +1,40 @@
+package pages;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class ArticlePage {
+
+    private final AndroidDriver driver;
+    private final WebDriverWait wait;
+
+    public ArticlePage(AndroidDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    }
+
+    private final By closeButton =
+            AppiumBy.id("org.wikipedia:id/closeButton");
+
+    private final By saveButton =
+            AppiumBy.id("org.wikipedia:id/page_save");
+
+    public void closePopup() {
+
+        wait.until(
+                ExpectedConditions.elementToBeClickable(closeButton)
+        ).click();
+    }
+
+    public void clickSave() {
+
+        wait.until(
+                ExpectedConditions.elementToBeClickable(saveButton)
+        ).click();
+    }
+}
